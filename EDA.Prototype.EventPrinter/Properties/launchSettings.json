@@ -1,0 +1,9 @@
+﻿{
+  "profiles": {
+    "EDA.Prototype.StringPrinter": {
+      "commandName": "Project",
+      "commandLineArgs": "--port 7288",
+      "launchBrowser": false
+    }
+  }
+}

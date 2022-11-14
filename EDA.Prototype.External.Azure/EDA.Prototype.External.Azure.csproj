@@ -1,22 +1,17 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
-    <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-    <UserSecretsId>64ceea8d-cd8b-4369-b916-476c1966c9fc</UserSecretsId>
+    <Nullable>enable</Nullable>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
     <PackageReference Include="Azure.Messaging.EventHubs" Version="5.7.4" />
-    <PackageReference Include="Scrutor" Version="4.2.0" />
-    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\EDA.Prototype.Infrastructure\EDA.Prototype.Infrastructure.csproj" />
-    <ProjectReference Include="..\EDA.Prototype.External.Azure\EDA.Prototype.External.Azure.csproj" />
     <ProjectReference Include="..\EDA.Prototype.Domain\EDA.Prototype.Domain.csproj" />
   </ItemGroup>
 </Project>
