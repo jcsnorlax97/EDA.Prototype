@@ -8,19 +8,19 @@ namespace EDA.Prototype.Controllers;
 [ApiController]
 public class EventController : ControllerBase
 {
-	private readonly IRequestHandler<SendEventRequest, bool> _sendEventRequestHandler;
+    private readonly IRequestHandler<SendEventRequest, bool> _sendEventRequestHandler;
 
-	public EventController(IRequestHandler<SendEventRequest, bool> sendEventRequestHandler)
-	{
-		_sendEventRequestHandler = sendEventRequestHandler;
-	}
+    public EventController(IRequestHandler<SendEventRequest, bool> sendEventRequestHandler)
+    {
+        _sendEventRequestHandler = sendEventRequestHandler;
+    }
 
-	[HttpPost("api/events")]
+    [HttpPost("api/events")]
     [Consumes("application/json")]
     public async Task<ActionResult> SendEvent([FromBody] SendEventRequest request, CancellationToken cancellationToken)
-	{
-		await _sendEventRequestHandler.HandleAsync(request, cancellationToken);
+    {
+        await _sendEventRequestHandler.HandleAsync(request, cancellationToken);
 
-		return Ok(request);
-	}
+        return Ok(request);
+    }
 }

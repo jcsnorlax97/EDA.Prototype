@@ -7,8 +7,8 @@ namespace EDA.Prototype.Extensions;
 
 public static class ServiceCollectionExtensions
 {
-	public static void AddServiceCollections(this IServiceCollection services, IConfiguration configuration)
-	{
+    public static void AddServiceCollections(this IServiceCollection services, IConfiguration configuration)
+    {
         // Add services to the container.
         // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
         services.AddEndpointsApiExplorer();
